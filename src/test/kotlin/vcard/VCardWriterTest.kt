@@ -5,6 +5,7 @@ import com.github.rcbrgr.vcard.builder.VCardBuilder
 import com.github.rcbrgr.vcard.config.WriterConfig
 import com.github.rcbrgr.vcard.model.Kind
 import com.github.rcbrgr.vcard.model.VCardVersion
+import com.github.rcbrgr.vcard.model.param.EmailType
 import com.github.rcbrgr.vcard.model.param.PhoneType
 import org.junit.jupiter.api.Assertions.assertTrue
 import kotlin.test.Test
@@ -15,6 +16,7 @@ class VCardWriterTest {
         val card =
             VCardBuilder("Test Org")
                 .kind(Kind.ORG)
+                .addEmail("", EmailType.INTERNET)
                 .addPhoneNumber("123-555-0199", PhoneType.WORK, PhoneType.PREF)
                 .build()
 
