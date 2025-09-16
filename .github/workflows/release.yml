@@ -36,7 +36,7 @@ jobs:
           fetch-depth: 0
 
       - name: Conventional Commits Versioner
-        uses: smlx/ccv-action@v1
+        uses: smlx/ccv-action@v0.10.0
         id: ccv
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
